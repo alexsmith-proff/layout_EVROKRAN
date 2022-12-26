@@ -1,0 +1,113 @@
+.top-header {
+    background-color: #2D2D2D;
+    padding: 10px 0;
+
+    &__wrap {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__logo {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__logo-img {
+        margin-right: 25px;
+    }
+
+    &__logo-text {
+        font-size: 14px;
+        line-height: 142.19%;
+        color: #fff;
+        width: 170px;
+    }
+
+    &__contact {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+    }
+
+    &__contact-time {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        img {
+            margin-right: 10px;
+        }
+
+        p {
+            font-size: 14px;
+            line-height: 142.19%;
+            color: #fff;
+        }
+    }
+
+    &__btn {
+        font-family: 'PT Sans';
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 141.69%;
+        padding: 10px 27px;
+        border: 1px solid #FFBF1D;
+        color: #fff;
+        transition: .5s;
+
+        &:hover {
+            background-color: #FFBF1D;
+            color: #000;
+
+        }
+    }
+
+    &__call {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        img {
+            margin-right: 10px;
+        }
+
+        &-wrap {
+            a {
+                display: block;
+
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 156.69%;
+                color: #fff;
+            }
+        }
+
+
+    }
+}
+
+@media screen and (max-width: 1090px) {
+    .top-header {
+        &__contact {
+            display: none;
+        }
+
+        &__btn {
+            display: none;
+        }
+    }
+}
+
+@media screen and (max-width: 580px) {
+    .top-header {
+        &__wrap {
+            flex-direction: column;
+        }
+        &__logo{
+            margin-bottom: 25px;
+        }
+    }
+}
