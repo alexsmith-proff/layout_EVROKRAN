@@ -30,7 +30,18 @@ $(document).ready(function () {
 		speed: 5000,
 		autoplay: true
 	})
+	
 
+	$('.arenda__slider').slick({
+		infinite: true,
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		dots: true,
+		arrows: true,
+		// fade: true,
+		speed: 5000,
+		// autoplay: true
+	})
 	
 	
 
