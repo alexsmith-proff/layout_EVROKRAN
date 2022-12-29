@@ -54,10 +54,17 @@ $(document).ready(function () {
 		slidesToShow: 1,
 		slidesToScroll: 1,
 		dots: false,
-		arrows: true,
+		arrows: false,
 		fade: true,
 		speed: 3000,
-		autoplay: true
+		// autoplay: true
+	})
+
+	$('.arenda .arr-next').click(() => {
+		$('.arenda__slider').slick('slickNext')
+	})
+	$('.arenda .arr-prev').click(() => {
+		$('.arenda__slider').slick('slickPrev')
 	})
 	
 	
