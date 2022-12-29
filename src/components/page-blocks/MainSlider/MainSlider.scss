@@ -237,6 +237,18 @@
     }
 }
 
+@media screen and (max-width: 768px) {
+    .main-slider {
+        .slick-prev {
+            left: calc(50% - 66px + 154px);
+        }
+    
+        .slick-next {
+            left: calc(50% + 154px);
+        }       
+    }
+}
+
 @media screen and (max-width: 635px) {
     .main-slider {
         .main-slider__numbers {
@@ -244,6 +256,9 @@
         }
 
         .slick-arrow {
+            display: none !important;
+        }
+        img{
             display: none;
         }
     }

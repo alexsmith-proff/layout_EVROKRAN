@@ -1639,11 +1639,22 @@ button::-moz-focus-inner {
   background: url("../img/arrow-next.png") #FCB427 no-repeat 50%;
 }
 
+@media screen and (max-width: 768px) {
+  .main-slider .slick-prev {
+    left: calc(50% - 66px + 154px);
+  }
+  .main-slider .slick-next {
+    left: calc(50% + 154px);
+  }
+}
 @media screen and (max-width: 635px) {
   .main-slider .main-slider__numbers {
     display: none;
   }
   .main-slider .slick-arrow {
+    display: none !important;
+  }
+  .main-slider img {
     display: none;
   }
 }
