@@ -132,24 +132,21 @@
         }
     }
 
-    // &__pagination{
-    //     display: flex;
-    //     cursor: pointer;
-    //     position: absolute;
-    //     bottom: 20px;
-    //     &-item{
-    //         width: 180px;
-    //         height: 4px;
-    //         background-color: #C4C4C4;
-    //         transition: .5s;
-    //         &.active{
-    //             background-color: #535554;
-    //         }
-    //         &:hover{
-    //             background-color: #535554;                
-    //         }
-    //     }
-    // }
+    &__pagination{
+        display: flex;
+        position: absolute;
+        bottom: 20px;
+        &-item{
+            width: 180px;
+            height: 4px;
+            background-color: #C4C4C4;
+            transition: .5s;
+            &.active{
+                background-color: #535554;
+            }
+           
+        }
+    }
 
 
 

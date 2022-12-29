@@ -32,15 +32,32 @@ $(document).ready(function () {
 	})
 	
 
+	const getPagination = (currentSlide, countSlide) => {
+		let html = ''
+		for (let i = 0; i < countSlide; i++) {
+			if(currentSlide == i) html = html + '<div class="arenda__pagination-item active"></div>'
+				else html = html + '<div class="arenda__pagination-item"></div>'			
+		}
+		return html
+	}
+
+	$('.arenda__slider').on('init reInit', (event, slick, currentSlide, nextSlide) => {
+		console.log(currentSlide);
+		$('.arenda__pagination').html(getPagination(slick.slideCount-1, slick.slideCount))
+	  })
+	$('.arenda__slider').on(`beforeChange`, (event, slick, currentSlide, nextSlide) => {
+		$('.arenda__pagination').html(getPagination(currentSlide, slick.slideCount))
+	  })
+
 	$('.arenda__slider').slick({
 		infinite: true,
 		slidesToShow: 1,
 		slidesToScroll: 1,
-		dots: true,
+		dots: false,
 		arrows: true,
-		// fade: true,
-		speed: 5000,
-		// autoplay: true
+		fade: true,
+		speed: 3000,
+		autoplay: true
 	})
 	
 	

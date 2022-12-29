@@ -1109,6 +1109,24 @@ button::-moz-focus-inner {
 .arenda .slick-next:before {
   left: 15px;
 }
+.arenda__pagination {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  bottom: 20px;
+}
+.arenda__pagination-item {
+  width: 180px;
+  height: 4px;
+  background-color: #C4C4C4;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+}
+.arenda__pagination-item.active {
+  background-color: #535554;
+}
 .arenda .slick-dots {
   width: 400px;
 }
