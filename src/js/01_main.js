@@ -55,9 +55,10 @@ $(document).ready(function () {
 		slidesToScroll: 1,
 		dots: false,
 		arrows: false,
-		fade: true,
-		speed: 3000,
-		// autoplay: true
+		fade: false,
+		speed: 1800,
+		autoplaySpeed: 6000,
+		autoplay: true
 	})
 
 	$('.arenda .arr-next').click(() => {

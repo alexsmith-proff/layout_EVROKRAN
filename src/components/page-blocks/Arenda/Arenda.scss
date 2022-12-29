@@ -40,7 +40,6 @@
 
         img {
             display: block;
-            // width: 100%;
             height: 458px;
             position: absolute;
             top: 0px;
@@ -53,7 +52,6 @@
         width: 50%;
         text-align: left;
         position: relative;
-        // margin-bottom: 75px;
     }
 
     &__right.column {
@@ -91,8 +89,9 @@
     .arrow-wrap {
         display: flex;
         position: absolute;
-        left: 400px;
+        left: calc(50% + 450px);
         bottom: 60px;
+        z-index: 999;
     }
 
     .arr-prev,
@@ -142,14 +141,16 @@
 
     &__pagination {
         display: flex;
+        width: calc(50% - 50px);
+        height: 4px;
+        background-color: #C4C4C4;
         position: absolute;
         bottom: 20px;
-        width: 100%;
+        right: 25px;
+        z-index: 999;
 
         &-item {
-            // width: 180px;
-            width: 28%;
-            height: 4px;
+            width: 50%;
             background-color: #C4C4C4;
             transition: .5s;
 
@@ -161,21 +162,31 @@
     }
 
 
+    .slick-dots {
+        display: flex;
+        justify-content: flex-end;
+        width: 50%;
 
-    // .slick-dots {
-    //     width: 400px;
-    // }
+        position: absolute;
+        left: 50%;
+        bottom: 10px;
+        transform: translateX(-50%);
 
-    // .slick-dots .slick-active {
-    //     position: relative;
-    // }
-
-    // .slick-dots:before {
-    //     content: "";
-    // }
-    // .slick-dots .slick-active::before {
-    //     content: "";
-    // }
+        li {
+            height: 4px;
+            width: 50%;
+            background: #C4C4C4;
+            cursor: pointer;
+            margin: 0;
+            & button:before{
+                content: '';
+                padding: 0;
+            }
+        }
+        .slick-active{
+            background-color: #535554;            
+        }
+    }
 }
 
 @media screen and (max-width: 1175px) {
@@ -220,6 +231,12 @@
             right: 70px;
         }
 
+        &__pagination {
+            width: calc(100% - 50px);
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
     }
 }
 
@@ -232,8 +249,9 @@
         &__left {
             display: block;
             max-width: 100%;
+
             // object-fit: contain;
-            img{
+            img {
                 max-width: 100%;
                 height: auto;
 
@@ -244,7 +262,7 @@
 
 @media screen and (max-width: 350px) {
     .arenda {
-        &__btn{
+        &__btn {
             padding: 15px 30px;
         }
     }

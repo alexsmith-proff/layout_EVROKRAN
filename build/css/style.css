@@ -1074,8 +1074,9 @@ button::-moz-focus-inner {
   display: -ms-flexbox;
   display: flex;
   position: absolute;
-  left: 400px;
+  left: calc(50% + 450px);
   bottom: 60px;
+  z-index: 999;
 }
 .arenda .arr-prev,
 .arenda .arr-next {
@@ -1118,19 +1119,51 @@ button::-moz-focus-inner {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  width: calc(50% - 50px);
+  height: 4px;
+  background-color: #C4C4C4;
   position: absolute;
   bottom: 20px;
-  width: 100%;
+  right: 25px;
+  z-index: 999;
 }
 .arenda__pagination-item {
-  width: 28%;
-  height: 4px;
+  width: 50%;
   background-color: #C4C4C4;
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s;
 }
 .arenda__pagination-item.active {
+  background-color: #535554;
+}
+.arenda .slick-dots {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  width: 50%;
+  position: absolute;
+  left: 50%;
+  bottom: 10px;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+.arenda .slick-dots li {
+  height: 4px;
+  width: 50%;
+  background: #C4C4C4;
+  cursor: pointer;
+  margin: 0;
+}
+.arenda .slick-dots li button:before {
+  content: "";
+  padding: 0;
+}
+.arenda .slick-dots .slick-active {
   background-color: #535554;
 }
 
@@ -1174,6 +1207,13 @@ button::-moz-focus-inner {
   .arenda .arrow-wrap {
     left: auto;
     right: 70px;
+  }
+  .arenda__pagination {
+    width: calc(100% - 50px);
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
   }
 }
 @media screen and (max-width: 768px) {
