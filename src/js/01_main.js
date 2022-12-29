@@ -26,7 +26,7 @@ $(document).ready(function () {
 		slidesToScroll: 1,
 		dots: false,
 		arrows: true,
-		fade: true,
+		fade: false,
 		speed: 5000,
 		autoplay: true
 	})

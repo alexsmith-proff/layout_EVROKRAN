@@ -1698,6 +1698,109 @@ button::-moz-focus-inner {
     display: none;
   }
 }
+.reliably {
+  padding-top: 175px;
+  margin-bottom: 50px;
+}
+.reliably__title {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 141.69%;
+  color: #424242;
+  margin-bottom: 65px;
+}
+.reliably__wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.reliably__left {
+  width: 50%;
+}
+.reliably__left p {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 156.69%;
+  color: #2D2D2D;
+  margin-bottom: 30px;
+}
+.reliably__left.mobile {
+  display: none;
+}
+.reliably__right {
+  width: 50%;
+  padding-top: 20px;
+}
+.reliably__list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-gap: 10px;
+}
+.reliably__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 35px;
+}
+.reliably__item img {
+  width: 80px;
+  height: 75px;
+  margin-bottom: 20px;
+}
+.reliably__item-text {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 142.19%;
+  text-align: center;
+  color: #2D2D2D;
+  width: 245px;
+}
+
+@media screen and (max-width: 1040px) {
+  .reliably__wrap {
+    display: block;
+  }
+  .reliably__left {
+    width: 100%;
+  }
+  .reliably__right {
+    width: 100%;
+  }
+  .reliably__list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-gap: 10px;
+  }
+  .reliably__item-text {
+    width: 155px;
+  }
+  .reliably__left.desktop {
+    display: none;
+  }
+  .reliably__left.mobile {
+    display: block;
+    padding-top: 70px;
+  }
+  .reliably__button {
+    text-align: center;
+  }
+}
 .top-header {
   background-color: #2D2D2D;
   padding: 10px 0;
